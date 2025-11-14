@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HEX.COM: FAQ</title>
+	<title>ProveX.COM: FAQ</title>
 	<meta name="description" lang="en" content="HEX.COM: Frequently Asked Questions">
 
 	<meta charset="utf-8">
-	<title>HEX.com went up 10,000x in price in 2 years</title>
+	<title>ProveX.com - Trustless Blockchain Settlements</title>
 	<link rel="shortcut icon" href="_assets/img/favicon128.png">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
@@ -28,11 +28,11 @@
 	<meta name="date" content="2025-11-13T00:00:00+00:00">
 	<meta name="page-topic" content="ProveX, crypto">
 
-	<meta property="og:url" content="https://HEX.com/faq">
-	<meta property="og:description" content="Frequently Asked Questions about HEX">
-	<meta name="twitter:description" content="Frequently Asked Questions about HEX">
-	<meta property="og:image:url" content="https://HEX.com/_assets/twt_cards/Faq.png">
-	<meta name="twitter:image" content="https://HEX.com/_assets/twt_cards/Faq.png">
+	<meta property="og:url" content="https://ProveX.com">
+	<meta property="og:description" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta name="twitter:description" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta property="og:image:url" content="https:/ProveX.com/_assets/twt_cards/Main.png">
+	<meta name="twitter:image" content="https://ProveX.com/_assets/twt_cards/Main.png">
 </head>
 <body>
 	<style>
@@ -158,8 +158,8 @@
 			<a class="menuLink" href="faq.html">FAQ</a>
 			
 
-			<a href="buy.html" id="buyBtn" class="btn btnColored" style="float: right; margin-top: 17px;">
-				<span class="mi">credit_card</span>How to buy
+			<a href="buy.html" id="buyBtn" class="btn btnPlain" style="float: right; margin-top: 17px;">
+				<span class="mi">credit_card</span>How to get ProveX tokens
 			</a>
 
 			<a href="javascript:menu()" id="mobileMenuBtn" class="btn btnColored" style="display: none; float: right; margin-top: 17px; padding: 11px 15.5px;">
@@ -479,17 +479,7 @@
 			}
 		}
 
-		async function updateContractAddressLink() {
-			const baseURL = await fetchBaseURL();
-			const contractLink = `${baseURL}/#/address/${contractAddress}?tab=contract`;
-			const container = document.getElementById('contractAddressContainer');
-			container.innerHTML = `
-            HEX Contract Address:
-            <a href="https://hex.com/${contractLink}" target="_blank" class="textLink" style="color: #555;">
-                ${contractAddress}
-            </a>
-        `;
-		}
+		
 
 		// Call the function to update the years when the page loads
 		updateYears();

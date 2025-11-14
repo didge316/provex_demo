@@ -5,7 +5,7 @@
 	<meta name="description" lang="en" content="HEX.COM: Security">
 
 	<meta charset="utf-8">
-	<title>HEX.com went up 10,000x in price in 2 years</title>
+	<title>ProveX.com - Trustless Blockchain Settlements</title>
 	<link rel="shortcut icon" href="_assets/img/favicon128.png">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
@@ -28,11 +28,11 @@
 	<meta name="date" content="2025-11-13T00:00:00+00:00">
 	<meta name="page-topic" content="ProveX, crypto">
 
-	<meta property="og:url" content="https://HEX.com/security">
-	<meta property="og:description" content="How to keep your HEX safe">
-	<meta name="twitter:description" content="How to keep your HEX safe">
-	<meta property="og:image:url" content="https://HEX.com/_assets/twt_cards/Security.png">
-	<meta name="twitter:image" content="https://HEX.com/_assets/twt_cards/Security.png">
+	<meta property="og:url" content="https://ProveX.com">
+	<meta property="og:description" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta name="twitter:description" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta property="og:image:url" content="https:/ProveX.com/_assets/twt_cards/Main.png">
+	<meta name="twitter:image" content="https://ProveX.com/_assets/twt_cards/Main.png">
 </head>
 <body>
 	<style>
@@ -156,17 +156,10 @@
 			<a class="menuLink" href="howitworks.html">How it works</a>
 			<a class="menuLink" href="links.html">Links</a>
 			<a class="menuLink" href="faq.html">FAQ</a>
-			<div class="menuLinkOuter" style="position: relative; display: inline-block; height: 100%;">
-				<a class="menuLink menuLinkStatic" href="javascript:">More<span class="mi">expand_more</span></a>
-				<div class="mpContent" style="visibility: hidden; opacity: 0; transition: all .2s; position: absolute; right: 0; top: 100%; background-color: var(--bgColor); text-align: right; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 10px));">
-					<a class="menuLink" href="security.html">Security</a>
-					<a class="menuLink" href="scam.html">Scam?</a>
-					<a class="menuLink" href="bitcoin.html" style="padding-bottom: 16px;">HEX vs Bitcoin</a>
-				</div>
-			</div>
+			
 
-			<a href="buy.html" id="buyBtn" class="btn btnColored" style="float: right; margin-top: 17px;">
-				<span class="mi">credit_card</span>How to buy
+			<a href="buy.html" id="buyBtn" class="btn btnPlain" style="float: right; margin-top: 17px;">
+				<span class="mi">credit_card</span>How to get ProveX tokens
 			</a>
 
 			<a href="javascript:menu()" id="mobileMenuBtn" class="btn btnColored" style="display: none; float: right; margin-top: 17px; padding: 11px 15.5px;">
@@ -390,50 +383,9 @@
 			}
 		})
 
-		// Scam warning & Job Listing
-		setTimeout(()=>{
-			console.log(
-				'%cSTOP!\n%cNEVER paste anything in here! YOU WILL GET SCAMMED!!!\n%cOnly type anything in here if you are VERY sure about what you are doing! Otherwise there is an extremely high chance that you WILL LOSE YOUR MONEY!',
-				'font-size: 50px; font-weight: 900; color: #f00;',
-				'font-size: 30px; font-weight: 900; color: #f00;',
-				'font-size: 15px; font-weight: 900; color: #f00;'
-			)
+		
 
-			console.log(
-				'%cBut\n%cin case you actually know what you are doing visit hex.com/dev',
-				'font-size: 50px; font-weight: 900; color: #f0f;',
-				'font-size: 15px; font-weight: 900; color: #f0f;'
-			)
-		}, 1000)
-
-		const fallbackURL = "https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39?tab=contract";
-		const contractAddress = "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39";
-		const versionJsonURL = "https://scan.pulsechain.com/version.json";
-
-		async function fetchBaseURL() {
-			try {
-				const response = await fetch(versionJsonURL);
-				if (!response.ok) throw new Error('Failed to fetch base URL');
-				const data = await response.json();
-				const baseURL = data.ipfs_gateways?.[0];
-				return baseURL || fallbackURL;
-			} catch (error) {
-				console.error("Error fetching base URL:", error);
-				return fallbackURL;
-			}
-		}
-
-		async function updateContractAddressLink() {
-			const baseURL = await fetchBaseURL();
-			const contractLink = `${baseURL}/#/address/${contractAddress}?tab=contract`;
-			const container = document.getElementById('contractAddressContainer');
-			container.innerHTML = `
-            HEX Contract Address:
-            <a href="https://hex.com/${contractLink}" target="_blank" class="textLink" style="color: #555;">
-                ${contractAddress}
-            </a>
-        `;
-		}
+		
 
 		function updateYear() {
 			const currentYear = new Date().getFullYear();

@@ -80,6 +80,10 @@ iframe {
 	background: var(--logoGradient); color: #fff; filter: saturate(.9);
 	text-shadow: 0 1px 3px #0002;
 }
+.btnPlain {
+	background: #6a11cb; color: #fff; filter: saturate(.9);
+	text-shadow: 0 1px 3px #0002;
+}
 .btn > span {
 	position: relative; float: left;
 	font-size: 1.45em; margin: 0 6px 0 -1px;
