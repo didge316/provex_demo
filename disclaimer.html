@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ProveX.COM: Disclaimer</title>
+	<meta name="description" lang="en" content="ProveX.COM: Disclaimer">
+
+	<meta charset="utf-8">
+	<title>ProveX.com went up 10,000x in price in 2 years</title>
+	<link rel="shortcut icon" href="_assets/img/favicon128.png">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+	<link rel="stylesheet" href="_assets/css/MaterialIcons.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="_assets/css/video-js.min.css" media="print" onload="this.media='all'">
+	<script src="_assets/js/video.min.js"></script>
+	<script src="_assets/js/jquery-3.6.0.min.js"></script>
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ProveX.COM">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="ProveX.COM">
+
+	<!-- SEO -->
+	<meta name="copyright" content="Richard Heart, 2025">
+	<meta name="author" content="Richard Heart">
+	<meta name="description" lang="en" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta name="keywords" lang="en" content="ProveX, crypto, Pulsechain,  Richard Heart, Trustless, cryptocurrency">
+	<meta name="date" content="2025-11-13T00:00:00+00:00">
+	<meta name="page-topic" content="ProveX, crypto">
+
+	<meta property="og:url" content="https://ProveX.com/disclaimer">
+	<meta property="og:description" content="Disclaimer">
+	<meta name="twitter:description" content="Disclaimer">
+</head>
+<body>
+	<style>
+		/*menu bar expanding to full width onscroll*/
+		.menuBarScrolled {
+			clip-path: polygon(
+				0 0, 0 0,
+				100% 0, 100% 0,
+				100% 50%, 100% 50%,
+				100% 100%, 100% 100%,
+				0 100%, 0 100%,
+				0 50%, 0 50%
+			) !important;
+		}
+
+		/*menu links & dropdown*/
+		.menuLink {
+			position: relative; display: inline-block; padding: 28px 16px; white-space: nowrap;
+		}
+		.menuLink, .mobileMenuLink {
+			font-weight: 600; font-size: 16px; text-transform: uppercase; letter-spacing: .05em; color: #aaa;
+		}
+		.menuLinkActive, .menuLinkStatic {cursor: default;}
+		.menuLinkActive { color: #fff; font-weight: 700; pointer-events: none;}
+		.menuLink > span {
+			position: relative; float: right; font-size: 1.35em;
+		}
+		.mpContent > .menuLink {
+			padding: 8px 16px; width: calc(100% - 32px);
+		}
+
+		@media not all and (pointer:coarse) {
+			.menuLink:not(.menuLinkActive, .menuLinkStatic):hover, .mobileMenuLink:hover {
+				color: #ccc;
+			}
+
+			.menuLinkOuter:hover .mpContent {
+				opacity: 1 !important; visibility: visible !important;
+			}
+		}
+
+
+		#mobileMenu > div > div {
+			position: relative; float: right; width: 100%;
+		}
+		.mobileMenuLink {
+			position: relative; float: right; font-size: 20px; margin-bottom: 10px; padding: 5px 12px;
+		}
+
+
+		/*Price label online indicator*/
+		#menuBarPriceLbl:before {
+			content: '⬢'; transform: rotate(30deg);
+			position: absolute; font-size: 9px; left: -12px; top: 2px;
+		}
+
+		#menuBarPriceLbl:after {
+			content: '⬢';
+			position: absolute; font-size: 9px; left: -12px; top: 2px;
+			animation-name: pulsate; animation-duration: 2s; animation-iteration-count: infinite;
+		}
+
+		@keyframes pulsate {
+			from {transform: rotate(30deg) scale(1); opacity: .6;}
+			to {transform: rotate(30deg) scale(4); opacity: 0;}
+		}
+
+
+
+		@media (hover: none), (max-width: 1080px) {
+			#menuBarOuter {top: 0 !important;}
+			#menuBarBG {
+				clip-path: polygon(
+					0 0, 0 0,
+					100% 0, 100% 0,
+					100% 50%, 100% 50%,
+					100% 100%, 100% 100%,
+					0 100%, 0 100%,
+					0 50%, 0 50%
+				) !important;
+			}
+		}
+
+		@media (hover: none), (max-width: 1050px) {
+			#buyBtn > .mi {display: none;}
+		}
+
+		@media (hover: none), (max-width: 820px) {
+			.menuLink, #buyBtn {display: none;}
+			#mobileMenuBtn, #mobileMenu {display: inherit !important;}
+			#menuBarOuter {transition: all .2s !important;}
+		}
+
+		@media (max-height: 550px) {
+			.mobileMenuLink {margin-bottom: 5px;}
+		}
+	</style>
+
+	<div id="menuBarOuter" style="position: fixed; left: 0; top: 15px; width: 100%; height: 80px; z-index: 1000; transition: all .5s;">
+		<div class="hr" id="menuBarBG" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: var(--bgColor); height: 80px; clip-path: polygon(
+			calc(50% - var(--bodyWidth)/2 - 2px) 2px,
+			calc(50% - var(--bodyWidth)/2 + 1px) 0,
+			calc(50% + var(--bodyWidth)/2 - 1px) 0,
+			calc(50% + var(--bodyWidth)/2 + 2px) 2px,
+			calc(50% + var(--bodyWidth)/2 + 23px) calc(50% - 2px),
+			calc(50% + var(--bodyWidth)/2 + 23px) calc(50% + 2px),
+			calc(50% + var(--bodyWidth)/2 + 2px) calc(100% - 2px),
+			calc(50% + var(--bodyWidth)/2 - 1px) 100%,
+			calc(50% - var(--bodyWidth)/2 + 1px) 100%,
+			calc(50% - var(--bodyWidth)/2 - 2px) calc(100% - 2px),
+			calc(50% - var(--bodyWidth)/2 - 23px) calc(50% + 2px),
+			calc(50% - var(--bodyWidth)/2 - 23px) calc(50% - 2px)
+		); transition: all .5s;"></div>
+
+		<div class="hr" style="width: var(--bodyWidth);">
+			<a href="index.html" id="menuLogoLink">
+				<img src="_assets/img/wordmark.png" class="fl" style="height: 40px; margin-top: 20px;" alt="ProveX.COM Logo png">
+				
+			</a>
+
+			<a class="menuLink" href="how_provex_works.html">How ProveX works</a>
+			
+			<a class="menuLink" href="faq.html">FAQ</a>
+		
+
+			<a href="buy.html" id="buyBtn" class="btn btnColored" style="float: right; margin-top: 17px;">
+				<span class="mi">credit_card</span>How to buy
+			</a>
+
+			<a href="javascript:menu()" id="mobileMenuBtn" class="btn btnColored" style="display: none; float: right; margin-top: 17px; padding: 11px 15.5px;">
+				<span class="mi" style="margin-right: 0;">menu</span>
+			</a>
+		</div>
+
+		<div id="mobileMenu" style="display: none; visibility: hidden; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--bgColor); transform: translateX(111%); will-change: transform; transition: all .2s;">
+			<div style="width: var(--bodyWidth); position: relative; display: inline-block; text-align: right;">
+				<div><a class="mobileMenuLink" href="howitworks.html">How it works</a></div>
+				
+				<div><a class="mobileMenuLink" href="faq.html">FAQ</a></div>
+			
+
+				<a href="buy.html" id="mobileBuyBtn" class="btn" style="float: right; margin: 7px 0 25px 0;">
+					<span class="mi">credit_card</span>How to buy
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		if ('..' == '.')
+			$('#menuLogoLink').addClass('menuLinkActive')
+
+		const siteIndex = ['howitworks','links','faq','security','scam','bitcoin'].indexOf(window.location.pathname.replaceAll('/',''))
+		if (siteIndex > -1)
+			$(`.menuLink:eq(${siteIndex>2?siteIndex+1:siteIndex}), .mobileMenuLink:eq(${siteIndex})`).addClass('menuLinkActive')
+
+		if (window.location.pathname.replaceAll('/','') == 'buy') {
+			$('#buyBtn').css({cursor:'default',transform:'scale(1)',filter:'none'}).attr('href','javascript:')
+			$('#mobileBuyBtn').hide()
+		}
+
+		function scrollPlay () {
+			const scrolled = $(document).scrollTop()>=1
+			$('#menuBarBG').toggleClass('menuBarScrolled', scrolled)
+			$('#menuBarOuter').css({
+				top: scrolled ? 0 : 15,
+				filter: `drop-shadow(0 2px ${scrolled ? 5 : 50}px #000)`
+			})
+
+			window.requestAnimationFrame(scrollPlay)
+		}
+
+		scrollPlay()
+
+		let mobileMenuActive = false
+		function menu () {
+			mobileMenuActive = !mobileMenuActive
+			$('#mobileMenuBtn').children().eq(0).text(mobileMenuActive ? 'close' : 'menu')
+			$('#mobileMenu').css({
+				transform: `translateX(${mobileMenuActive?0:111}%)`,
+				visibility: mobileMenuActive ? 'visible' : 'hidden' // hide because the box-shadow is otherwise visible on the right border of the screen
+			})
+		}
+
+		$.getJSON('https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xf1f4ee610b2babb05c635f726ef8b0c568c8dc65', e => {
+			$('#menuBarPriceLbl').text(parseFloat(e.pair.priceUsd).toPrecision(2)).fadeIn(500)
+		})
+	</script>
+
+	<div class="hr section" style="background: var(--logoGradient);">
+		<div class="hr pageOuter pageTitleOuter">
+			<h1 class="hr pageTitle">Disclaimer</h1>
+		</div>
+	</div>
+
+	<div class="hr section sectionFlat" style="background-color: var(--darkBlue);">
+		<div class="hr pageOuter linkSection">
+			Nothing on ProveX.com is financial advice. Do your own research. Nobody knows what the ProveX price is going to do in the future. Never expect profit from the work of others.<br><br>
+
+			ProveX is not a security. There aren't actually any coins, they're just numbers in a distributed database. No one is actually given anything. People can execute the code they choose, on their own, that changes some numbers in a counter. The code that edits some database values should only be modifiable by valid key holders who've signed a cryptographic message. Other code can be run by anyone if they like.<br><br>
+
+			There is no common enterprise, there shall be no expectation of efforts of a promoter or third party. There is no expectation of profit from the work of others. People pay the PulseChain network to execute computations of their choosing, on their own. There is only an immutable compiled bytecode sitting on the PulseChain network. It can't be changed. They're just numbers living on the Internet. The code can do nothing on its own. People can run the code if they want to, or not. The code can do nothing on its own but sit there.<br><br>
+
+			Users generate their own keys, no one else has keys to give them. Bonuses don't actually take anyone else's database values, they just add or subtract more or less database values based on the system state.<br><br>
+
+			If you can, learn to code; or have the smartest coder or computer scientist you can find read over the code you plan to execute.<br><br>
+
+			Blockchains, Smart contracts, and Cryptocurrencies, Are all cutting edge technologies, and as such, there is a risk, however small, of total failure. Software is hard. Computers are hard. Distributed software on distributed computers is harder. It's a miracle this stuff works at all. Strong cryptography seems unlikely to be broken, but if it is, everything will probably be broken.<br><br>
+
+			Bitcoin Miners run computations and mint their own BTC reward if their computation matches what the network consensus code requires.<br><br>
+
+			ProveX Miners run computations and mint their own ProveX reward if their computation matches what the network consensus code requires.<br><br>
+
+			In either network you can run your own code on your own machine, or pay someone else to run the code your choose for you to mint your reward. In Bitcoin the code lives in the node, in ProveX the code lives in the node at a contract address. Paying a fee is paying someone to run your code.<br><br>
+
+			ProveX is not an airdrop or a fork. You mint your own coins when you FreeClaim using BTC or transform ETH into ProveX. A wonderful innovation! An airdrop requires someone else control the coins and give them to you. A fork requires that some code exist and be forked.<br><br>
+
+			<h1 class="hr">The Howey test</h1>
+			<a href="https://www.google.com/search?q=Howey+test" target="_blank" rel="noopener" class="textLink">The Howey test</a> defines what U.S. federal securities laws apply to, which the SEC administers.<br><br>
+
+			You must have no expectation of any benefit whatsoever from any ETH sent to the ProveX contract or any ProveX the origin address receives. You must have no expectation of profit from the efforts of others. You must have no reliance on the effort of others. ProveX is just a piece of inert code at a contract address on the ETH network. It can do absolutely nothing on its own. Every ProveX that ever exists is caused to exist by a user creating it himself per the rules of the code that he chooses to run that lives at an PulseChain contract address, and people might refer to as ProveX, mining his own ETH block or paying an ETH miner to do it for him. Only you can mint your own ProveX when you run the "leaveXfLobby" function's code, as it requires your private key. Only you can run the "startStake" function's code to mine your ProveX, as it requires your private key. Mining ProveX are actually "burnt" or "destroyed". Only you can mint your own ProveX when you run the "endStake" function's code, as it requires your private key. The users themselves perform all the work. This is the same way that all BTC are caused to exist, people run code and "coins" are created when the network's rules are met.  Wherever possible you agree there is no investment of money.  Wherever possible you agree there is no common enterprise. Charitable Donations may be sent directly to the contract by sending it ETH. If you want to join the AdoptionAmplifier system, you must use joinXfLobby function.<br><br>
+
+			If you try to cheat the referral program by overwriting the code of the person that referred you with your own code, the ProveX "User Chosen Software Assister" will ignore it. This means that the last set cookie always wins except in the case that you try to overwrite it with a referral link to your own address in metamask. The ProveX "User Chosen Software Assister" behavior might change regarding the referral links. It could be disabled, or prevent your metamask address from being in a cookie even if it wasn't overwriting another. Referrals could even go away entirely or be changed. It will be great to see more software built for users to help them run the software of their choice the way they want to run it.<br><br>
+
+			Cryptocurrencies are extremely volatile. Bitcoin went from a penny to $32, then it crashed 94% to $2. Then it went from $2 to $270 then crashed 81%. Then it went from $51 to $1200 then crashed 86%. Then it went from $164 to $20,000, then crashed 84%. Then it went from $3150 to $14,000 and crashed 72%. And that's the most liquid, oldest cryptocurrency in the world. Nearly every crypto currency drops 85% to 95% at some point. Some get back up and make new all time highs.<br><br>
+
+			<h1 class="hr">Legal Disclaimer</h1>
+			1. Risks related to the use of ProveX "User Chosen Software Assister"<br><br>
+
+			ProveX will not be responsible for any losses, damages or claims arising from events falling within the scope of the following five categories:<br><br>
+			- Mistakes made by the user of any cryptocurrency-related software or service, e.g., forgotten passwords, payments sent to wrong coin addresses, and accidental deletion of ProveX "User Chosen Software Assister"s.<br><br>
+			- Software problems of the ProveX "User Chosen Software Assister" and/or any cryptocurrency-related software or service, e.g., corrupted ProveX "User Chosen Software Assister" file, incorrectly constructed transactions, unsafe cryptographic libraries, malware affecting the ProveX "User Chosen Software Assister" and/or any cryptocurrency-related software or service.<br><br>
+			- Technical failures in the hardware of the user of any cryptocurrency-related software or service, e.g., data loss due to a faulty or damaged storage device.<br><br>
+			- Security problems experienced by the user of any cryptocurrency-related software or service, e.g., unauthorized access to users' ProveX "User Chosen Software Assister"s and/or accounts.<br><br>
+			- Actions or inactions of third parties and/or events experienced by third parties, e.g., bankruptcy of service providers, information security attacks on service providers, and fraud conducted by third parties.<br><br>
+
+			2. Trading and Investment risks<br><br>
+			There is considerable exposure to risk in any crypto-currency exchange transaction. Any transaction involving currencies involves risks including, but not limited to, the potential for changing economic conditions that may substantially affect the price or liquidity of a currency. Investments in crypto-currency exchange speculation may also be susceptible to sharp rises and falls as the relevant market values fluctuate. It is for this reason that when speculating in such markets it is advisable to use only risk capital.<br><br>
+
+			3. Electronic Trading Risks<br><br>
+			Before you engage in transactions using an electronic system, you should carefully review the rules and regulations of the exchanges offering the system and/or listing the instruments you intend to trade. Online trading has inherent risk due to system response and access times that may vary due to market conditions, system performance, and other factors. You should understand these and additional risks before trading.<br><br>
+
+			4. Compliance with tax obligations<br><br>
+			The users of the ProveX "User Chosen Software Assister" are solely responsible to determinate what, if any, taxes apply to their crypto-currency transactions. The owners of, or contributors to, the ProveX "User Chosen Software Assister" are NOT responsible for determining the taxes that apply to crypto-currency transactions.<br><br>
+
+			5. No warranties<br><br>
+			The ProveX "User Chosen Software Assister" is provided on an "as is" basis without any warranties of any kind regarding the ProveX "User Chosen Software Assister" and/or any content, data, materials and/or services provided on the ProveX "User Chosen Software Assister"<br><br>
+
+			6. Limitation of liability<br><br>
+			Unless otherwise required by law, in no event shall the owners of, or contributors to, the ProveX "User Chosen Software Assister" be liable for any damages of any kind, including, but not limited to, loss of use, loss of profits, or loss of data arising out of or in any way connected with the use of the ProveX "User Chosen Software Assister" In no way are the owners of, or contributors to, the ProveX "User Chosen Software Assister" responsible for the actions, decisions, or other behavior taken or not taken by you in reliance upon the ProveX "User Chosen Software Assister"<br><br>
+
+			7. Arbitration<br><br>
+			The user of the ProveX "User Chosen Software Assister" agrees to arbitrate any dispute arising from or in connection with the ProveX "User Chosen Software Assister" or this disclaimer, except for disputes related to copyrights, logos, trademarks, trade names, trade secrets or patents.<br><br>
+
+			8. Last amendment<br><br>
+			This disclaimer was amended for the last time on December 2nd, 2019.<br><br>
+
+			<h1 class="hr">Consent</h1>
+			By using our website, you hereby consent to our <a href="privacy.html" class="textLink">Privacy Policy</a> and agree to its <a href="tos.html" class="textLink">Terms and Conditions</a>.<br><br>
+
+			<h1 class="hr">More Stuff</h1>
+			If you've read down this far, congratulations. You will notice the theme of all of the above text is that you should have absolutely no expectations of any sort regarding anything, and if anything goes wrong, you shouldn't look for redress anywhere, and you should receive none. When you send ETH to the contract, you don't get the ETH back. Donations can be made by sending ETH directly to the contract without running the joinXfLobby function. Software is hard. Blockchain software is harder. We're lucky any of this stuff works at all.
+		</div>
+	</div>
+
+	<style>
+		#socialsOuter > a > img {
+			height: 50px; position: absolute; transition: all .1s;
+			clip-path: polygon( /*this is only to make hover effect borders more smooth*/
+				25% 5%,
+				75% 5%,
+				102% 50%,
+				75% 95%,
+				25% 95%,
+				-2% 50%
+			);
+		}
+
+		@media not all and (pointer:coarse) {
+			#socialsOuter > a > img:hover {transform: scale(1.08);}
+		}
+
+		#footerOuter {padding-top: 145px !important; padding-bottom: 40px;}
+		@media (max-width: 1150px) {
+			#footerOuter {padding-top: 95px !important;}
+		}
+
+		#socialsOuter {position: absolute; top: 50%; left: 50%; width: 320px; height: 102px; transform: translate(-50%, -50%);}
+		@media (max-width: 820px) {
+			#footerOuter > .pageOuter {text-align: center;}
+			#socialsOuter {display: inline-block; position: relative; transform: none; left: auto; margin: 50px 0;}
+			#disclaimerOuter, #footerLinksOuter {width: 100%; text-align: center !important;}
+		}
+
+		@media (max-width: 360px) {
+			#socialsOuter {left: 50%; transform: translateX(-50%); margin: 30px 0;}
+		}
+	</style>
+
+	<div class="hr section" id="footerOuter" style="background-color: var(--bgColor);">
+		<span class="hr pageOuter">
+			<div class="fl" id="footerLinksOuter" style="float: right; text-align: right; line-height: 1.6em;">
+				
+			</div>
+
+
+
+			<div class="fl" id="disclaimerOuter">
+				<span style="font-size: 12px; color: #555;">
+					Copyright © <span id="current-year"></span>. All Rights Reserved.<br>
+					<a href="disclaimer.html" class="textLink" style="color: #555; margin-right: 5px;">Disclaimer</a>
+					<a href="tos.html" class="textLink" style="color: #555; margin-right: 5px;">ToS</a>
+					<a href="privacy.html" class="textLink" style="color: #555;">Privacy</a>
+					<br>
+					
+				</span>
+			</div>
+		</span>
+	</div>
+
+	<script>
+		function scrollToElem (elemID) {
+			window.scrollTo(0, $('#'+elemID).offset().top - 160)
+		}
+
+
+		$('.infoBtn').each((index, elem)=>{
+			const btnText = $(elem).text()
+			$(elem).attr('href', `javascript:showInfoDiv("${btnText}")`)
+			// Add icon to button
+			$(elem).html(`<span class="mi">${content[btnText][1]}</span>${$(elem).html()}`)
+		})
+
+		function showInfoDiv (cID) {
+			$('#infoDivTitle').html(`
+				<span class="mi">${content[cID][1]}</span>
+				<span style="z-index: 2102; position: relative;">${content[cID][0]}</span>
+			`)
+			$('#infoDivText').html(content[cID][2].replace(/\r?\n/g, '<br>'))
+			$('.infoDiv, .blackBG').show()
+			window.location.hash = cID.replaceAll(' ', '_')
+		}
+
+		function close () {
+			history.replaceState(null, null, ' ')
+			$('.infoDiv, .blackBG').hide()
+		}
+
+
+		const flSiteIndex = ['downloads','dev'].indexOf(window.location.pathname.replaceAll('/',''))
+		if (flSiteIndex > -1)
+			$(`.footerLink:eq(${flSiteIndex})`).css({
+				cursor: 'default',
+				'text-decoration': 'none',
+				'font-weight': '700'
+			}).attr('href','javascript:')
+
+		// Pause every other video when another one is played
+		const vids = Array.prototype.slice.apply($('video'))
+		vids.forEach(v => {
+			v.addEventListener('play', e => {
+				vids.forEach(v => {
+					if (e.target != v) v.pause()
+				})
+			})
+		})
+
+		// Hide clip-paths in videojs fullscreen to fix z-index bug in Safari on desktop
+		$(()=>{
+			for (i=0;i<vids.length;i++) {
+				videojs(vids[i]).on('fullscreenchange', ()=>{
+					$('.section').toggleClass('sectionCP')
+				})
+			}
+		})
+
+		// Scam warning & Job Listing
+		setTimeout(()=>{
+			console.log(
+				'%cSTOP!\n%cNEVER paste anything in here! YOU WILL GET SCAMMED!!!\n%cOnly type anything in here if you are VERY sure about what you are doing! Otherwise there is an extremely high chance that you WILL LOSE YOUR MONEY!',
+				'font-size: 50px; font-weight: 900; color: #f00;',
+				'font-size: 30px; font-weight: 900; color: #f00;',
+				'font-size: 15px; font-weight: 900; color: #f00;'
+			)
+
+			console.log(
+				'%cBut\n%cin case you actually know what you are doing visit ProveX.com/dev',
+				'font-size: 50px; font-weight: 900; color: #f0f;',
+				'font-size: 15px; font-weight: 900; color: #f0f;'
+			)
+		}, 1000)
+
+		const fallbackURL = "https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39?tab=contract";
+		const contractAddress = "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39";
+		const versionJsonURL = "https://scan.pulsechain.com/version.json";
+
+		async function fetchBaseURL() {
+			try {
+				const response = await fetch(versionJsonURL);
+				if (!response.ok) throw new Error('Failed to fetch base URL');
+				const data = await response.json();
+				const baseURL = data.ipfs_gateways?.[0];
+				return baseURL || fallbackURL;
+			} catch (error) {
+				console.error("Error fetching base URL:", error);
+				return fallbackURL;
+			}
+		}
+
+		async function updateContractAddressLink() {
+			const baseURL = await fetchBaseURL();
+			const contractLink = `${baseURL}/#/address/${contractAddress}?tab=contract`;
+			const container = document.getElementById('contractAddressContainer');
+			container.innerHTML = `
+            ProveX Contract Address:
+            <a href="https://ProveX.com/${contractLink}" target="_blank" class="textLink" style="color: #555;">
+                ${contractAddress}
+            </a>
+        `;
+		}
+
+		function updateYear() {
+			const currentYear = new Date().getFullYear();
+			document.getElementById('current-year').textContent = currentYear;
+		}
+
+		// Call the function to update the contract address link
+        updateContractAddressLink();
+
+        // Call the function to update the year when the page loads
+        updateYear();
+	</script>
+</body>
+</html>

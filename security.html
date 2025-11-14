@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HEX.COM: Security</title>
+	<meta name="description" lang="en" content="HEX.COM: Security">
+
+	<meta charset="utf-8">
+	<title>HEX.com went up 10,000x in price in 2 years</title>
+	<link rel="shortcut icon" href="_assets/img/favicon128.png">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+	<link rel="stylesheet" href="_assets/css/MaterialIcons.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="_assets/css/video-js.min.css" media="print" onload="this.media='all'">
+	<script src="_assets/js/video.min.js"></script>
+	<script src="_assets/js/jquery-3.6.0.min.js"></script>
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="PROVEX.COM">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="PROVEX.COM">
+
+	<!-- SEO -->
+	<meta name="copyright" content="Richard Heart, 2025">
+	<meta name="author" content="Richard Heart">
+	<meta name="description" lang="en" content="ProveX.com - Trustless Blockchain Settlements">
+	<meta name="keywords" lang="en" content="ProveX, crypto, Pulsechain,  Richard Heart, Trustless, cryptocurrency">
+	<meta name="date" content="2025-11-13T00:00:00+00:00">
+	<meta name="page-topic" content="ProveX, crypto">
+
+	<meta property="og:url" content="https://HEX.com/security">
+	<meta property="og:description" content="How to keep your HEX safe">
+	<meta name="twitter:description" content="How to keep your HEX safe">
+	<meta property="og:image:url" content="https://HEX.com/_assets/twt_cards/Security.png">
+	<meta name="twitter:image" content="https://HEX.com/_assets/twt_cards/Security.png">
+</head>
+<body>
+	<style>
+		/*menu bar expanding to full width onscroll*/
+		.menuBarScrolled {
+			clip-path: polygon(
+				0 0, 0 0,
+				100% 0, 100% 0,
+				100% 50%, 100% 50%,
+				100% 100%, 100% 100%,
+				0 100%, 0 100%,
+				0 50%, 0 50%
+			) !important;
+		}
+
+		/*menu links & dropdown*/
+		.menuLink {
+			position: relative; display: inline-block; padding: 28px 16px; white-space: nowrap;
+		}
+		.menuLink, .mobileMenuLink {
+			font-weight: 600; font-size: 16px; text-transform: uppercase; letter-spacing: .05em; color: #aaa;
+		}
+		.menuLinkActive, .menuLinkStatic {cursor: default;}
+		.menuLinkActive { color: #fff; font-weight: 700; pointer-events: none;}
+		.menuLink > span {
+			position: relative; float: right; font-size: 1.35em;
+		}
+		.mpContent > .menuLink {
+			padding: 8px 16px; width: calc(100% - 32px);
+		}
+
+		@media not all and (pointer:coarse) {
+			.menuLink:not(.menuLinkActive, .menuLinkStatic):hover, .mobileMenuLink:hover {
+				color: #ccc;
+			}
+
+			.menuLinkOuter:hover .mpContent {
+				opacity: 1 !important; visibility: visible !important;
+			}
+		}
+
+
+		#mobileMenu > div > div {
+			position: relative; float: right; width: 100%;
+		}
+		.mobileMenuLink {
+			position: relative; float: right; font-size: 20px; margin-bottom: 10px; padding: 5px 12px;
+		}
+
+
+		/*Price label online indicator*/
+		#menuBarPriceLbl:before {
+			content: '⬢'; transform: rotate(30deg);
+			position: absolute; font-size: 9px; left: -12px; top: 2px;
+		}
+
+		#menuBarPriceLbl:after {
+			content: '⬢';
+			position: absolute; font-size: 9px; left: -12px; top: 2px;
+			animation-name: pulsate; animation-duration: 2s; animation-iteration-count: infinite;
+		}
+
+		@keyframes pulsate {
+			from {transform: rotate(30deg) scale(1); opacity: .6;}
+			to {transform: rotate(30deg) scale(4); opacity: 0;}
+		}
+
+
+
+		@media (hover: none), (max-width: 1080px) {
+			#menuBarOuter {top: 0 !important;}
+			#menuBarBG {
+				clip-path: polygon(
+					0 0, 0 0,
+					100% 0, 100% 0,
+					100% 50%, 100% 50%,
+					100% 100%, 100% 100%,
+					0 100%, 0 100%,
+					0 50%, 0 50%
+				) !important;
+			}
+		}
+
+		@media (hover: none), (max-width: 1050px) {
+			#buyBtn > .mi {display: none;}
+		}
+
+		@media (hover: none), (max-width: 820px) {
+			.menuLink, #buyBtn {display: none;}
+			#mobileMenuBtn, #mobileMenu {display: inherit !important;}
+			#menuBarOuter {transition: all .2s !important;}
+		}
+
+		@media (max-height: 550px) {
+			.mobileMenuLink {margin-bottom: 5px;}
+		}
+	</style>
+
+	<div id="menuBarOuter" style="position: fixed; left: 0; top: 15px; width: 100%; height: 80px; z-index: 1000; transition: all .5s;">
+		<div class="hr" id="menuBarBG" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: var(--bgColor); height: 80px; clip-path: polygon(
+			calc(50% - var(--bodyWidth)/2 - 2px) 2px,
+			calc(50% - var(--bodyWidth)/2 + 1px) 0,
+			calc(50% + var(--bodyWidth)/2 - 1px) 0,
+			calc(50% + var(--bodyWidth)/2 + 2px) 2px,
+			calc(50% + var(--bodyWidth)/2 + 23px) calc(50% - 2px),
+			calc(50% + var(--bodyWidth)/2 + 23px) calc(50% + 2px),
+			calc(50% + var(--bodyWidth)/2 + 2px) calc(100% - 2px),
+			calc(50% + var(--bodyWidth)/2 - 1px) 100%,
+			calc(50% - var(--bodyWidth)/2 + 1px) 100%,
+			calc(50% - var(--bodyWidth)/2 - 2px) calc(100% - 2px),
+			calc(50% - var(--bodyWidth)/2 - 23px) calc(50% + 2px),
+			calc(50% - var(--bodyWidth)/2 - 23px) calc(50% - 2px)
+		); transition: all .5s;"></div>
+
+		<div class="hr" style="width: var(--bodyWidth);">
+			<a href="index.html" id="menuLogoLink">
+				<img src="_assets/img/wordmark.svg" class="fl" style="height: 40px; margin-top: 20px;" alt="HEX.COM Logo svg">
+				<span id="menuBarPriceLbl" style="display: none; position: absolute; top: 10px; left: 171px; color: #0f5; font-size: 12px; font-family: 'Jost';"></span>
+			</a>
+
+			<a class="menuLink" href="howitworks.html">How it works</a>
+			<a class="menuLink" href="links.html">Links</a>
+			<a class="menuLink" href="faq.html">FAQ</a>
+			<div class="menuLinkOuter" style="position: relative; display: inline-block; height: 100%;">
+				<a class="menuLink menuLinkStatic" href="javascript:">More<span class="mi">expand_more</span></a>
+				<div class="mpContent" style="visibility: hidden; opacity: 0; transition: all .2s; position: absolute; right: 0; top: 100%; background-color: var(--bgColor); text-align: right; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 10px));">
+					<a class="menuLink" href="security.html">Security</a>
+					<a class="menuLink" href="scam.html">Scam?</a>
+					<a class="menuLink" href="bitcoin.html" style="padding-bottom: 16px;">HEX vs Bitcoin</a>
+				</div>
+			</div>
+
+			<a href="buy.html" id="buyBtn" class="btn btnColored" style="float: right; margin-top: 17px;">
+				<span class="mi">credit_card</span>How to buy
+			</a>
+
+			<a href="javascript:menu()" id="mobileMenuBtn" class="btn btnColored" style="display: none; float: right; margin-top: 17px; padding: 11px 15.5px;">
+				<span class="mi" style="margin-right: 0;">menu</span>
+			</a>
+		</div>
+
+		<div id="mobileMenu" style="display: none; visibility: hidden; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--bgColor); transform: translateX(111%); will-change: transform; transition: all .2s;">
+			<div style="width: var(--bodyWidth); position: relative; display: inline-block; text-align: right;">
+				<div><a class="mobileMenuLink" href="howitworks.html">How it works</a></div>
+				<div><a class="mobileMenuLink" href="links.html">Links</a></div>
+				<div><a class="mobileMenuLink" href="faq.html">FAQ</a></div>
+				<div><a class="mobileMenuLink" href="security.html">Security</a></div>
+				<div><a class="mobileMenuLink" href="scam.html">Scam?</a></div>
+				<div><a class="mobileMenuLink" href="bitcoin.html">HEX vs Bitcoin</a></div>
+
+				<a href="buy.html" id="mobileBuyBtn" class="btn" style="float: right; margin: 7px 0 25px 0;">
+					<span class="mi">credit_card</span>How to buy
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		if ('..' == '.')
+			$('#menuLogoLink').addClass('menuLinkActive')
+
+		const siteIndex = ['howitworks','links','faq','security','scam','bitcoin'].indexOf(window.location.pathname.replaceAll('/',''))
+		if (siteIndex > -1)
+			$(`.menuLink:eq(${siteIndex>2?siteIndex+1:siteIndex}), .mobileMenuLink:eq(${siteIndex})`).addClass('menuLinkActive')
+
+		if (window.location.pathname.replaceAll('/','') == 'buy') {
+			$('#buyBtn').css({cursor:'default',transform:'scale(1)',filter:'none'}).attr('href','javascript:')
+			$('#mobileBuyBtn').hide()
+		}
+
+		function scrollPlay () {
+			const scrolled = $(document).scrollTop()>=1
+			$('#menuBarBG').toggleClass('menuBarScrolled', scrolled)
+			$('#menuBarOuter').css({
+				top: scrolled ? 0 : 15,
+				filter: `drop-shadow(0 2px ${scrolled ? 5 : 50}px #000)`
+			})
+
+			window.requestAnimationFrame(scrollPlay)
+		}
+
+		scrollPlay()
+
+		let mobileMenuActive = false
+		function menu () {
+			mobileMenuActive = !mobileMenuActive
+			$('#mobileMenuBtn').children().eq(0).text(mobileMenuActive ? 'close' : 'menu')
+			$('#mobileMenu').css({
+				transform: `translateX(${mobileMenuActive?0:111}%)`,
+				visibility: mobileMenuActive ? 'visible' : 'hidden' // hide because the box-shadow is otherwise visible on the right border of the screen
+			})
+		}
+
+		$.getJSON('https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xf1f4ee610b2babb05c635f726ef8b0c568c8dc65', e => {
+			$('#menuBarPriceLbl').text(parseFloat(e.pair.priceUsd).toPrecision(2)).fadeIn(500)
+		})
+	</script>
+
+	<div class="hr section" style="background: var(--logoGradient);">
+		<div class="hr pageOuter pageTitleOuter">
+			<h1 class="hr pageTitle">How to keep your HEX safe</h1>
+		</div>
+	</div>
+
+	<div class="hr section" style="background-color: var(--darkBlue);">
+		<div class="hr pageOuter selectable">
+			<h1 class="hr" style="color: #0f5;">Do</h1>
+			If you plan to store <b>more than $10,000</b> of crypto, you should get a hardware wallet. Keep in mind that even a small $1000 investment may easily grow into a $10,000 one. Hardware wallets are very easy to use, so don't be intimidated.
+			<br><br>
+			1) Buy a <a href="https://shop.trezor.io/product/trezor-one-black" target="_blank" rel="noopener" class="textLink">Trezor Model One</a> (roughly $70).<br>
+			2) Once your Trezor arrives follow the directions and set it up. Write down the 12 "seed" words (or "secret recovery phrase") it shows you by hand with a pen on a piece of paper. Store that piece of paper in a different location from your Trezor; such as a safe deposit box at your bank, or in the house of a friend or family member you trust.<br>
+			3) Download the <a href="https://metamask.io/" target="_blank" rel="noopener" class="textLink">MetaMask Wallet</a> browser extension.<br>
+			4) Connect your Trezor to MetaMask Wallet.<br>
+			5) Send a small amount of crypto to your Trezor (the PulseChain address shown within MetaMask Wallet).<br>
+			6) Try sending the amount back to another wallet you own to test if your Trezor works and you set up everything correctly.<br>
+			7) Learn more about <a href="howitworks.html" class="textLink">how HEX works</a>, keep an <a href="https://hexscout.com" target="_blank" rel="noopener" class="textLink">eye on your Miners</a>, be responsible.
+		</div>
+	</div>
+
+	<div class="hr section" style="background-color: #111; background-image: url(_assets/img/bg/pattern.jpg);">
+		<div class="hr pageOuter selectable">
+			<h1 class="hr" style="color: #f00;">Don't</h1>
+			- Lose your secret recovery phrase (or "seed"), show it to anyone, make a photo of it, store it online or print it out. <b style="color: #f00;">Never ever type those 12 words into any computer</b> or give them to someone who's asking for them. If you need to restore your wallet you enter the 12 words on the Trezor itself. <b style="color: #f00;">If a website asks for your seed words it is 100% a scam.</b><br>
+			- Split the 12 words up. Write all of them in the right order on a single piece of paper.<br>
+			- Write down something like "Backup for my $50,000 crypto investment" next to the 12 words. You'll remember what they are for without writing anything next to them.<br><br>
+			- Brag about how rich you are. If you really need to, do it online and as anonymously as possible. Use an alias.<br><br>
+			- Get greedy. Never try margin trading. You will lose all of your money.<br>
+			- Answer random DMs from "admins" that try to help you. They are all scammers. There is nothing like a HEX/Pulse support/help desk.<br>
+			- Spam, shill, be rude.<br><br>
+			- Buy something you don't understand.<br>
+			- Expect profits from the work of others. HEX is not a security, nobody will work for you. Nobody owes you anything.<br>
+			- Emergency End Miner (EEM) if you don't really know what you are doing. You might get penalized and lose all of your HEX.
+		</div>
+	</div>
+
+	<div class="hr section" style="background: var(--bgGradient);">
+		<div class="hr pageOuter">
+			<h1 class="hr">I own less than $1000 of crypto</h1>
+			In this case using plain MetaMask Wallet without a hardware wallet is sufficiently secure. Still write down your secret recovery phrase.<br><br>
+			It's not worth it to spend $100 on a piece of hardware to protect less than $1000.
+		</div>
+	</div>
+
+	<style>
+		#socialsOuter > a > img {
+			height: 50px; position: absolute; transition: all .1s;
+			clip-path: polygon( /*this is only to make hover effect borders more smooth*/
+				25% 5%,
+				75% 5%,
+				102% 50%,
+				75% 95%,
+				25% 95%,
+				-2% 50%
+			);
+		}
+
+		@media not all and (pointer:coarse) {
+			#socialsOuter > a > img:hover {transform: scale(1.08);}
+		}
+
+		#footerOuter {padding-top: 145px !important; padding-bottom: 40px;}
+		@media (max-width: 1150px) {
+			#footerOuter {padding-top: 95px !important;}
+		}
+
+		#socialsOuter {position: absolute; top: 50%; left: 50%; width: 320px; height: 102px; transform: translate(-50%, -50%);}
+		@media (max-width: 820px) {
+			#footerOuter > .pageOuter {text-align: center;}
+			#socialsOuter {display: inline-block; position: relative; transform: none; left: auto; margin: 50px 0;}
+			#disclaimerOuter, #footerLinksOuter {width: 100%; text-align: center !important;}
+		}
+
+		@media (max-width: 360px) {
+			#socialsOuter {left: 50%; transform: translateX(-50%); margin: 30px 0;}
+		}
+	</style>
+
+	<div class="hr section" id="footerOuter" style="background-color: var(--bgColor);">
+		<span class="hr pageOuter">
+			<div class="fl" id="footerLinksOuter" style="float: right; text-align: right; line-height: 1.6em;">
+				<a href="downloads.html" class="textLink footerLink">Downloads</a><br>
+				<a href="dev.html" class="textLink footerLink">Developers</a>
+			</div>
+
+
+
+			<div class="fl" id="disclaimerOuter">
+				<span style="font-size: 12px; color: #555;">
+					Copyright © <span id="current-year"></span>. All Rights Reserved.<br>
+					<a href="disclaimer.html" class="textLink" style="color: #555; margin-right: 5px;">Disclaimer</a>
+					<a href="tos.html" class="textLink" style="color: #555; margin-right: 5px;">ToS</a>
+					<a href="privacy.html" class="textLink" style="color: #555;">Privacy</a>
+					<br>
+					<span id="contractAddressContainer" style="font-size: 12px; color: #555;">
+                		HEX Contract Address: <span>0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39</span>
+            		</span>
+				</span>
+			</div>
+		</span>
+	</div>
+
+	<script>
+		function scrollToElem (elemID) {
+			window.scrollTo(0, $('#'+elemID).offset().top - 160)
+		}
+
+
+		$('.infoBtn').each((index, elem)=>{
+			const btnText = $(elem).text()
+			$(elem).attr('href', `javascript:showInfoDiv("${btnText}")`)
+			// Add icon to button
+			$(elem).html(`<span class="mi">${content[btnText][1]}</span>${$(elem).html()}`)
+		})
+
+		function showInfoDiv (cID) {
+			$('#infoDivTitle').html(`
+				<span class="mi">${content[cID][1]}</span>
+				<span style="z-index: 2102; position: relative;">${content[cID][0]}</span>
+			`)
+			$('#infoDivText').html(content[cID][2].replace(/\r?\n/g, '<br>'))
+			$('.infoDiv, .blackBG').show()
+			window.location.hash = cID.replaceAll(' ', '_')
+		}
+
+		function close () {
+			history.replaceState(null, null, ' ')
+			$('.infoDiv, .blackBG').hide()
+		}
+
+
+		const flSiteIndex = ['downloads','dev'].indexOf(window.location.pathname.replaceAll('/',''))
+		if (flSiteIndex > -1)
+			$(`.footerLink:eq(${flSiteIndex})`).css({
+				cursor: 'default',
+				'text-decoration': 'none',
+				'font-weight': '700'
+			}).attr('href','javascript:')
+
+		// Pause every other video when another one is played
+		const vids = Array.prototype.slice.apply($('video'))
+		vids.forEach(v => {
+			v.addEventListener('play', e => {
+				vids.forEach(v => {
+					if (e.target != v) v.pause()
+				})
+			})
+		})
+
+		// Hide clip-paths in videojs fullscreen to fix z-index bug in Safari on desktop
+		$(()=>{
+			for (i=0;i<vids.length;i++) {
+				videojs(vids[i]).on('fullscreenchange', ()=>{
+					$('.section').toggleClass('sectionCP')
+				})
+			}
+		})
+
+		// Scam warning & Job Listing
+		setTimeout(()=>{
+			console.log(
+				'%cSTOP!\n%cNEVER paste anything in here! YOU WILL GET SCAMMED!!!\n%cOnly type anything in here if you are VERY sure about what you are doing! Otherwise there is an extremely high chance that you WILL LOSE YOUR MONEY!',
+				'font-size: 50px; font-weight: 900; color: #f00;',
+				'font-size: 30px; font-weight: 900; color: #f00;',
+				'font-size: 15px; font-weight: 900; color: #f00;'
+			)
+
+			console.log(
+				'%cBut\n%cin case you actually know what you are doing visit hex.com/dev',
+				'font-size: 50px; font-weight: 900; color: #f0f;',
+				'font-size: 15px; font-weight: 900; color: #f0f;'
+			)
+		}, 1000)
+
+		const fallbackURL = "https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39?tab=contract";
+		const contractAddress = "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39";
+		const versionJsonURL = "https://scan.pulsechain.com/version.json";
+
+		async function fetchBaseURL() {
+			try {
+				const response = await fetch(versionJsonURL);
+				if (!response.ok) throw new Error('Failed to fetch base URL');
+				const data = await response.json();
+				const baseURL = data.ipfs_gateways?.[0];
+				return baseURL || fallbackURL;
+			} catch (error) {
+				console.error("Error fetching base URL:", error);
+				return fallbackURL;
+			}
+		}
+
+		async function updateContractAddressLink() {
+			const baseURL = await fetchBaseURL();
+			const contractLink = `${baseURL}/#/address/${contractAddress}?tab=contract`;
+			const container = document.getElementById('contractAddressContainer');
+			container.innerHTML = `
+            HEX Contract Address:
+            <a href="https://hex.com/${contractLink}" target="_blank" class="textLink" style="color: #555;">
+                ${contractAddress}
+            </a>
+        `;
+		}
+
+		function updateYear() {
+			const currentYear = new Date().getFullYear();
+			document.getElementById('current-year').textContent = currentYear;
+		}
+
+		// Call the function to update the contract address link
+        updateContractAddressLink();
+
+        // Call the function to update the year when the page loads
+        updateYear();
+	</script>
+</body>
+</html>
